@@ -1,0 +1,43 @@
+/* 基礎字體導入 (範例) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;500&family=Fira+Code&display=swap');
+
+:root {
+    /* A. Default - 京都動漫風 (Kyoto) */
+    --bg-color: #f5f7fa;
+    --text-color: #2c3e50;
+    --accent-color: #5d6d7e;
+    --nav-bg: rgba(245, 247, 250, 0.8);
+    --font-main: 'Noto Sans TC', sans-serif;
+    --transition-speed: 0.5s;
+}
+
+[data-theme='seeker'] {
+    /* B. Seeker - 真理書卷風 (Paper) */
+    --bg-color: #fdfbf7;
+    --text-color: #3e2723;
+    --accent-color: #8d6e63;
+    --nav-bg: rgba(253, 251, 247, 0.9);
+    --font-main: 'Noto Serif TC', serif;
+}
+
+[data-theme='creation'] {
+    /* C. Creation - 深淵克蘇魯風 (Abyss) */
+    --bg-color: #050505;
+    --text-color: #e0e0e0;
+    --accent-color: #9d4edd;
+    --nav-bg: rgba(5, 5, 5, 0.9);
+    --font-main: 'Fira Code', 'Noto Sans TC', monospace;
+
+    /* 深淵特有效果 */
+    --glow-shadow: 0 0 10px #9d4edd;
+}
+
+/* 全域重置 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
